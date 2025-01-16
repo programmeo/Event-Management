@@ -32,7 +32,7 @@ Setup
 ### Prerequisites
 
 *   Node.js (v14 or higher)
-*   npm or yarn
+*   npm
 *   MongoDB Atlas account and cluster
 
 ### Installation
@@ -50,12 +50,12 @@ Setup
     *   Add the following environment variables:
         
             PORT=5000
-            MONGO_URI=
-            JWT_SECRET=
+            MONGO_URI= <DB_CONNECTION_STRING>
+            JWT_SECRET= <KEY_FOR_TOKEN_GENERATIONS>
         
 4.  Run the application:
     
-        npm start
+        nodemon index.js
     
     The server will run on `http://localhost:5000`.
 
@@ -67,7 +67,7 @@ API Endpoints
 *   **POST \`/api/auth/register\`**: Register a new user.
     
         {
-          "username": "exampleUser",
+          "name": "exampleUser",
           "email": "user@example.com",
           "password": "yourPassword"
         }
