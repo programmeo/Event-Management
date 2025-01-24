@@ -2,6 +2,10 @@
 
 Event Management Web App
 ========================
+![Event-Home](https://github.com/user-attachments/assets/76c39215-4622-4ccf-8f90-cb5cea7943fd)
+![Event-Login](https://github.com/user-attachments/assets/0b5fa0fe-2544-416b-866a-9f5e2f188ac3)
+![Event-Register](https://github.com/user-attachments/assets/fef807ab-adf0-4636-8756-2163f4fb45a3)
+
 
 Overview
 --------
