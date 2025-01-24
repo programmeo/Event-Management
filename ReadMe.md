@@ -28,7 +28,7 @@ For testing purposes, you can use the following dummy credentials to log in:
 *   **Username**: `yash@example.com`
 *   **Password**: `password123`
 
-Access the backend API here: [http://backend.com]([http://backend.com](https://event-management-q3fb.onrender.com))
+Access the backend API here: https://event-management-q3fb.onrender.com
 
 Frontend
 --------
@@ -43,7 +43,7 @@ Key Features:
 *   **User Authentication**: Login and registration forms communicate with the backend to authenticate users.
 *   **Event Management**: Users can create, update, and view events through the frontend interface.
 
-Access the frontend here: [http://frontend.com](event-management-henna-nine.vercel.app)
+Access the frontend here: https://event-management-henna-nine.vercel.app/
 
 Testing
 -------
