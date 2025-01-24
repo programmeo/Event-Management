@@ -26,7 +26,7 @@ const Dashboard = () => {
         const fetchEvents = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const { data } = await axios.get('http://localhost:5000/api/events', {
+                const { data } = await axios.get(`${process.env.REACT_APP_HOST_URI}/api/events`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -41,7 +41,7 @@ const Dashboard = () => {
         fetchEvents();
 
         // Connect to Socket.IO server
-        const socket = io('http://localhost:5000');
+        const socket = io(`${process.env.REACT_APP_HOST_URI}`);
 
         // Listen for new events
         socket.on('newEvent', (newEvent) => {
@@ -57,7 +57,7 @@ const Dashboard = () => {
     const handleUpdate = async (crrevent) => {
         const token = localStorage.getItem('token');
 
-        const data = await axios.put(`http://localhost:5000/api/events/${crrevent._id}`,
+        const data = await axios.put(`${process.env.REACT_APP_HOST_URI}/api/events/${crrevent._id}`,
             newEvent,
             {
                 headers: {
@@ -74,7 +74,7 @@ const Dashboard = () => {
     const handleDelete = async (id) => {
         const token = localStorage.getItem('token');
 
-        const data = await axios.delete(`http://localhost:5000/api/events/${id}`, {
+        const data = await axios.delete(`${process.env.REACT_APP_HOST_URI}/api/events/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
@@ -97,7 +97,7 @@ const Dashboard = () => {
         try {
             const token = localStorage.getItem('token');
             const { data } = await axios.post(
-                'http://localhost:5000/api/events',
+                `${process.env.REACT_APP_HOST_URI}/api/events`,
                 newEvent,
                 {
                     headers: {
